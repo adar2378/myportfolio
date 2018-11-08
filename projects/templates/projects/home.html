@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load staticfiles %}
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="../../../../favicon.ico" />
+
+    <title>Adar's Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+  </head>
+
+  <body>
+    <header>
+      <nav
+        style="background-color: rgb(54, 54, 54) !important"
+        class="navbar navbar-expand-lg navbar-dark bg-dark"
+      >
+        <a class="navbar-brand" href="{% url 'home' %}">Saiful Islam Adar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="https://github.com/adar2378/"
+              >GitHub</a
+            >
+            <a
+              class="nav-item nav-link"
+              href="https://www.linkedin.com/in/saiful-islam-adar/"
+              >Linkedin</a
+            >
+            <a class="nav-item nav-link" href="{% static 'resume.pdf' %}"
+              >Resume</a
+            >
+            <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <section
+        style="background-color: #4ABCAD; color: #05396B"
+        class="jumbotron text-center jumbotron-fluid"
+      >
+        <div class="container">
+          <h1 class="display-4">Hi, I'm Adar</h1>
+
+          <p class="lead ">
+            I like to take challenges. I deliver the maximum output when I'm
+            under pressure. I try to learn and do new things to keep my life
+            away from being monotonus. I've sound knowledge of
+            <strong> Android SDK</strong>. Nowadays, I'm experimenting
+            with<strong> Django</strong> and <strong> React</strong>.
+            <br />During my free time, I play Dota 2 or Overwatch and play my
+            favorite toy, guitar. Thank you for visiting. Have a nice day 🙂
+          </p>
+          <p>
+            <a
+              href="mailto:saifulislamadar@gmail.com"
+              class="btn btn-primary my-2"
+              >Email Me!</a
+            >
+          </p>
+          <img height="250px" width="250px" src="{% static 'dpcopy.jpg' %}" />
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            {% for project in projects.all %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img
+                  class="card-img-top"
+                  src="{{ project.image.url }}/"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">{{ project.summary }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container-fluid ">
+        <hr class="my-3" />
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; A. K. M. Saiful Islam {% now "Y" %}</p>
+      </div>
+    </footer>
+
+    <!--
+      Bootstrap core JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ==================================================
+    -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
