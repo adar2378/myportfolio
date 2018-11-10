@@ -20,8 +20,15 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
 
     <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'css/project.css' %}" />
   </head>
 
   <body>
@@ -88,20 +95,27 @@
           <img height="250px" width="250px" src="{% static 'dpcopy.jpg' %}" />
         </div>
       </section>
+      <div class="text-center pt-5 display-4"><h1>Projects</h1></div>
+      <hr style="width: 83%" />
 
-      <div class="album py-5 bg-light">
+      <div class="py-5 bg-light">
         <div class="container">
           <div class="row">
             {% for project in projects.all %}
             <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
+              <div class="project card mb-4 shadow p-3 mb-5 bg-white rounded">
                 <img
                   class="card-img-top"
+                  style="height: 300px;"
                   src="{{ project.image.url }}/"
                   alt="Card image cap"
                 />
                 <div class="card-body">
+                  <h5 class="card-title">{{ project.title }}</h5>
                   <p class="card-text">{{ project.summary }}</p>
+                  <i class="fab fa-github"
+                    ><a href="{{ project.getLink }}"> View on Github</a></i
+                  >
                 </div>
               </div>
             </div>
@@ -121,6 +135,57 @@
 
     <!--
       Bootstrap core JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
