@@ -26,6 +26,10 @@ python run manage.py runserver
 ```
 And it will run the app on default 8000 port. Also you will need to have Postgresql database installed on your system.
 
+## Demo
+
+Visit "http://adar-portfolio.herokuapp.com" for the demo. The images will not load as I'm using the free version of heroku dyno.
+
 ## Built With
 
 * [Django](https://www.djangoproject.com/) - The web framework used
