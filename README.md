@@ -37,7 +37,7 @@ Visit "http://adar-portfolio.herokuapp.com" for the demo. The images will not lo
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/adar2378)
+* **A. K. M. Saiful Islam** - *Initial work* - [adar2378](https://github.com/adar2378)
 
 
 ## License
